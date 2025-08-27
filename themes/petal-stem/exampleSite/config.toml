@@ -1,0 +1,17 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "Petal & Stem — Demo"
+theme = "petal-stem"
+
+[params]
+  description = "Demo site for the Petal & Stem Hugo theme."
+  author = "Petal & Stem"
+  snipcart_api_key = "YOUR_SNIPCART_API_KEY_HERE" # Replace with your Snipcart public key
+  snipcart_version = "v3.3.0"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[permalinks]
+  products = "/shop/:slug/"

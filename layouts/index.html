@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="hero" data-aos="fade-up">
+  <div class="container">
+    <h1>{{ .Site.Title }}</h1>
+    <p>{{ .Site.Params.description }}</p>
+    <a class="btn" href="/shop/">Shop bouquets</a>
+  </div>
+</section>
+
+<section class="featured container" data-aos="fade-up" data-aos-delay="100">
+  <h2>Featured</h2>
+  <div class="grid">
+    {{ range first 3 site.Data.products }}
+      {{ partial "product-card.html" . }}
+    {{ end }}
+  </div>
+</section>
+
+<section class="about container" data-aos="fade-up" data-aos-delay="200">
+  <h2>About</h2>
+  <p>{{ with site.GetPage "page" "about" }}{{ .Summary }}{{ end }}</p>
+  <a href="/about/">Learn more</a>
+</section>
+{{ end }}

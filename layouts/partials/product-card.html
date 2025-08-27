@@ -1,0 +1,16 @@
+<div class="product-card" data-category="{{ .category }}">
+  <img src="{{ .image }}" alt="{{ .name }}" loading="lazy">
+  <h3>{{ .name }}</h3>
+  <p class="price">${{ printf "%.2f" .price }}</p>
+  <p class="excerpt">{{ .description }}</p>
+  <!-- Snipcart "add to cart" button (data attributes required) -->
+  <button
+    class="snipcart-add-item btn"
+    data-item-id="{{ .id }}"
+    data-item-price="{{ .price }}"
+    data-item-url="{{ $.Site.BaseURL }}shop/{{ .slug }}"
+    data-item-name="{{ .name }}"
+    data-item-description="{{ .description }}"
+    data-item-image="{{ .image }}"
+  >Add to cart</button>
+</div>

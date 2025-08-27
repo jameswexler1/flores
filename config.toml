@@ -1,0 +1,20 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Petal & Stem — Flower Shop"
+theme = "petal-stem"
+
+[params]
+  description = "Handcrafted flower arrangements and fast delivery."
+  author = "Petal & Stem"
+  snipcart_api_key = "YOUR_SNIPCART_API_KEY_HERE" # Replace with your Snipcart public key
+  snipcart_version = "v3.3.0"
+  google_fonts = "Playfair Display:400,700|Inter:300,400,600"
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[build]
+  writeStats = true
+
+[markup]
+  defaultMarkdownHandler = "goldmark"

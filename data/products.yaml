@@ -1,0 +1,44 @@
+- id: "rose-bouquet-classic"
+  name: "Classic Red Roses Bouquet"
+  slug: "classic-red-roses"
+  price: 59.00
+  description: "A timeless bouquet of a dozen long-stem red roses, elegantly wrapped."
+  image: "/images/roses-classic.jpg"
+  category: "roses"
+  stock: 20
+
+- id: "sunshine-spray"
+  name: "Sunshine Mixed Bouquet"
+  slug: "sunshine-mixed-bouquet"
+  price: 45.00
+  description: "Bright mixed bouquet with sunflowers and seasonal blooms."
+  image: "/images/sunshine.jpg"
+  category: "mixed"
+  stock: 14
+
+- id: "wild-meadow"
+  name: "Wild Meadow Arrangement"
+  slug: "wild-meadow"
+  price: 39.00
+  description: "Loose, natural style arrangement with wildflowers and greenery."
+  image: "/images/meadow.jpg"
+  category: "arrangements"
+  stock: 10
+
+- id: "luxe-orchid"
+  name: "Luxe Orchid Pot"
+  slug: "luxe-orchid"
+  price: 79.00
+  description: "Elegant potted orchid — long lasting and luxurious."
+  image: "/images/orchid.jpg"
+  category: "plants"
+  stock: 6
+
+- id: "get-well-small"
+  name: "Get Well Soon - Small"
+  slug: "get-well-small"
+  price: 29.00
+  description: "Compact cheerful arrangement to brighten recovery days."
+  image: "/images/get-well.jpg"
+  category: "gifts"
+  stock: 25

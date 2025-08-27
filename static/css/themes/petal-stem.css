@@ -1,0 +1,41 @@
+/* Theme main stylesheet - improved and more complete */
+
+/* Typography */
+:root{
+  --brand:#00796b;
+  --muted:#6b6b6b;
+  --radius:10px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;line-height:1.45;color:#111;background:#fff;margin:0}
+.container{max-width:1100px;margin:0 auto;padding:1.25rem}
+
+/* Header */
+.site-header{background:#fff;position:sticky;top:0;z-index:60;border-bottom:1px solid rgba(0,0,0,0.04)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 0}
+.logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1.5rem;color:var(--brand);text-decoration:none}
+.nav-links{display:flex;gap:0.75rem;align-items:center}
+.nav-links a{color:#333;text-decoration:none;padding:0.45rem 0.6rem;border-radius:8px}
+.nav-toggle{display:none;background:none;border:1px solid transparent;padding:0.4rem;border-radius:8px}
+
+/* Hero */
+.hero{padding:3.5rem 0;text-align:center;background:linear-gradient(180deg,#fff,#fbfbfd)}
+.hero h1{font-family:'Playfair Display',serif;font-size:2.4rem;margin:0 0 0.5rem}
+.hero p{color:var(--muted)}
+
+/* Grid & cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.card{background:#fff;border-radius:var(--radius);box-shadow:0 6px 20px rgba(12,12,12,0.06);overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.card .inner{padding:1rem;flex:1;display:flex;flex-direction:column}
+.price{font-weight:600;color:var(--brand);margin-top:auto}
+
+/* Footer */
+.site-footer{padding:2rem 0;margin-top:3rem;background:#fafafa;text-align:center;color:var(--muted)}
+
+/* Mobile */
+@media (max-width:800px){
+  .nav-links{display:none}
+  .nav-toggle{display:inline-block}
+  .grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+}

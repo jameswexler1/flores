@@ -1,0 +1,7 @@
+name = "petal-stem"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "Petal & Stem — Hugo theme for a flower shop (includes Snipcart + AOS + Fuse.js hooks)."
+homepage = "https://example.org/"
+tags = ["ecommerce","flowers","snipcart","aos","responsive"]
+min_version = "0.80.0"

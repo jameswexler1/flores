@@ -1,0 +1,52 @@
+{{ define "main" }}
+<article class="container product-single" data-aos="fade-up">
+  <div class="grid" style="grid-template-columns: 1fr 1fr; gap:1.5rem; align-items:start;">
+    <div class="gallery">
+      <img src="{{ .Params.image }}" alt="{{ .Title }}" style="width:100%; border-radius:8px;"/>
+    </div>
+    <div class="details">
+      <h1>{{ .Title }}</h1>
+      <p class="price">From ${{ printf "%.2f" .Params.price }}</p>
+      <div class="description">{{ .Content }}</div>
+
+      {{ if .Params.variants }}
+      <label for="variant-select">Choose an option</label>
+      <select id="variant-select" aria-label="Product options">
+        {{ range .Params.variants }}
+          <option data-price="{{ .price }}" data-id="{{ .id }}" value="{{ .id }}">{{ .name }} — ${{ printf "%.2f" .price }}</option>
+        {{ end }}
+      </select>
+      {{ end }}
+
+      <div style="margin-top:1rem;">
+        <button id="add-to-cart" class="btn snipcart-add-item"
+          data-item-id="{{ .File.Path }}"
+          data-item-price="{{ (index .Params.variants 0).price }}"
+          data-item-name="{{ .Title }}"
+          data-item-url="{{ .Permalink }}"
+          data-item-description="{{ .Summary }}"
+          data-item-image="{{ .Params.image }}"
+        >Add to cart</button>
+      </div>
+      <p class="small-note" style="margin-top:0.75rem; color:#666;">Free local delivery within city limits. Gift message available at checkout.</p>
+    </div>
+  </div>
+</article>
+
+<script>
+// Variant handling: update Snipcart attributes when variant changes
+document.addEventListener('DOMContentLoaded', function(){
+  var select = document.getElementById('variant-select');
+  var addBtn = document.getElementById('add-to-cart');
+  if (!select || !addBtn) return;
+  select.addEventListener('change', function(){
+    var opt = select.options[select.selectedIndex];
+    var price = opt.getAttribute('data-price');
+    var vid = opt.getAttribute('data-id');
+    addBtn.setAttribute('data-item-price', price);
+    addBtn.setAttribute('data-item-id', vid);
+    // attach variant-specific SKU or metadata if desired
+  });
+});
+</script>
+{{ end }}

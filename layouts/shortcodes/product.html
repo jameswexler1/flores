@@ -1,0 +1,7 @@
+{{ $id := .Get "id" }}
+{{ $prod := index site.Data.products (int 0) }}
+{{ range site.Data.products }}
+  {{ if eq .id $id }}
+    {{ partial "product-card.html" . }}
+  {{ end }}
+{{ end }}

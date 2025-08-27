@@ -1,0 +1,47 @@
+[
+  {
+    "id": "rose-bouquet-classic",
+    "name": "Classic Red Roses Bouquet",
+    "slug": "classic-red-roses",
+    "price": 59.0,
+    "description": "A timeless bouquet of a dozen long-stem red roses, elegantly wrapped.",
+    "category": "roses",
+    "image": "/images/roses-classic.jpg"
+  },
+  {
+    "id": "sunshine-spray",
+    "name": "Sunshine Mixed Bouquet",
+    "slug": "sunshine-mixed-bouquet",
+    "price": 45.0,
+    "description": "Bright mixed bouquet with sunflowers and seasonal blooms.",
+    "category": "mixed",
+    "image": "/images/sunshine.jpg"
+  },
+  {
+    "id": "wild-meadow",
+    "name": "Wild Meadow Arrangement",
+    "slug": "wild-meadow",
+    "price": 39.0,
+    "description": "Loose, natural style arrangement with wildflowers and greenery.",
+    "category": "arrangements",
+    "image": "/images/meadow.jpg"
+  },
+  {
+    "id": "luxe-orchid",
+    "name": "Luxe Orchid Pot",
+    "slug": "luxe-orchid",
+    "price": 79.0,
+    "description": "Elegant potted orchid \u2014 long lasting and luxurious.",
+    "category": "plants",
+    "image": "/images/orchid.jpg"
+  },
+  {
+    "id": "get-well-small",
+    "name": "Get Well Soon - Small",
+    "slug": "get-well-small",
+    "price": 29.0,
+    "description": "Compact cheerful arrangement to brighten recovery days.",
+    "category": "gifts",
+    "image": "/images/get-well.jpg"
+  }
+]

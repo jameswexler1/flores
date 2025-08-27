@@ -1,0 +1,34 @@
+{{ define "main" }}
+<div class="container">
+  <h1>{{ .Title }}</h1>
+
+  {{/* Render shop listing when this list page is the 'shop' section */}}
+  {{ if eq .Section "shop" }}
+    <div class="controls">
+      <input id="search-input" placeholder="Search products..." />
+      <select id="category-filter">
+        <option value="">All categories</option>
+        <option value="roses">Roses</option>
+        <option value="mixed">Mixed</option>
+        <option value="arrangements">Arrangements</option>
+        <option value="plants">Plants</option>
+        <option value="gifts">Gifts</option>
+      </select>
+    </div>
+
+    <div id="products-grid" class="grid" data-aos="fade-up">
+      {{ range site.Data.products }}
+        {{ partial "product-card.html" . }}
+      {{ end }}
+    </div>
+
+  {{/* Fallback rendering for blog, taxonomy lists, etc. */}}
+  {{ else }}
+    <ul>
+      {{ range .Pages }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  {{ end }}
+</div>
+{{ end }}
